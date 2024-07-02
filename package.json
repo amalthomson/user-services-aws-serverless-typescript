@@ -1,0 +1,30 @@
+{
+  "name": "aws-nodejs-typescript",
+  "version": "1.0.0",
+  "description": "AWS Lambda function using TypeScript and Serverless Framework",
+  "main": "handler.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "serverless offline",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "serverless deploy",
+    "deploy:dev": "serverless deploy --stage dev"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@serverless/typescript": "^3.38.0",
+    "@types/node": "^20.14.7",
+    "aws-sdk": "^2.1646.0",
+    "serverless-webpack": "^5.14.1",
+    "ts-loader": "^9.5.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.2",
+    "webpack": "^5.92.1",
+    "webpack-cli": "^5.1.4"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.140"
+  }
+}

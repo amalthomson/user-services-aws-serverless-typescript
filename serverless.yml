@@ -1,0 +1,25 @@
+service: serverless-demo-user-service-any-mothod
+
+frameworkVersion: 4.1.5
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+  region: us-east-1
+
+functions:
+  userService:
+    handler: src/handler.userService
+    events:
+      - http:
+          path: users
+          method: any
+      - http:
+          path: users/{id}
+          method: any
+
+custom:
+  serverless-offline:
+    port: 3000
+    host: localhost
+
